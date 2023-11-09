@@ -1,7 +1,8 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { test, expect } from '@jest/globals';
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-unresolved */
+const { test, expect } = require('@jest/globals');
 
-import greeting from './app';
+const greeting = require('./app');
 
 test('should return "Hello name"', () => {
   const result = greeting('Jean-Kevin');
