@@ -4,7 +4,24 @@ const { test, expect } = require('@jest/globals');
 
 const greeting = require('./app');
 
-test('should return "Hello name"', () => {
+// 1
+test('should return "Hello name."', () => {
   const result = greeting('Jean-Kevin');
   expect(result).toEqual('Hello, Jean-Kevin.');
+});
+
+// 2
+test('should return "Hello, my friend."', () => {
+  const result = greeting(null);
+  expect(result).toEqual('Hello, my friend.');
+});
+
+test('should return "Hello, my friend."', () => {
+  const result = greeting(undefined);
+  expect(result).toEqual('Hello, my friend.');
+});
+
+test('should return "Hello, my friend."', () => {
+  const result = greeting('');
+  expect(result).toEqual('Hello, my friend.');
 });
