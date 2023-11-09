@@ -23,7 +23,7 @@ function greeting(name) {
       }
     });
     lowercaseNames.forEach((n, index) => {
-      if (index < lowercaseNames.length - 2) {
+      if(index < lowercaseNames.length - 2) {
         stringToReturn += `${n}, `;
       } else if (index === lowercaseNames.length - 1) {
         stringToReturn += `and ${n}.`;
