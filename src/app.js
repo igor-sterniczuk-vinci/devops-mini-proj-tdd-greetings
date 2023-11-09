@@ -12,15 +12,27 @@ function greeting(name) {
   }
   if (Array.isArray(name)) {
     let stringToReturn = "Hello, ";
-    name.forEach((n, index) => {
-      if (index < name.length - 2) {
+    let uppercaseName;
+    let lowercaseNames = [];
+    name.forEach((n) => {
+      if (isCapitalLettersOnly(n)) {
+        uppercaseName = n;
+      } else {
+        lowercaseNames.push(n);
+      }
+    });
+    lowercaseNames.forEach((n, index) => {
+      if (index < lowercaseNames.length - 2) {
         stringToReturn += `${n}, `;
-      } else if (index === name.length - 1) {
+      } else if (index === lowercaseNames.length - 1) {
         stringToReturn += `and ${n}.`;
       } else {
         stringToReturn += `${n} `;
       }
     });
+    if (uppercaseName != null) {
+      stringToReturn += ` AND HELLO ${uppercaseName} !`;
+    }
     return stringToReturn;
   }
   if (isCapitalLettersOnly(name)) {
