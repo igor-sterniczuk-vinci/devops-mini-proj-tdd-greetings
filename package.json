@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings/issues"
   },
-  "homepage": "https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings#readme"
+  "homepage": "https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings#readme",
+  "devDependencies": {
+    "eslint": "^8.53.0"
+  }
 }
