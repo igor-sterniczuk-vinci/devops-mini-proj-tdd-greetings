@@ -27,7 +27,7 @@ test('should return "Hello, my friend."', () => {
 });
 
 // 3
-test('should return "Hello KENOBI."', () => {
+test('should return "Hello, KENOBI!"', () => {
   const result = greeting("KENOBI");
-  expect(result).toEqual("Hello, KENOBI.");
+  expect(result).toEqual("HELLO, KENOBI!");
 });
