@@ -17,13 +17,12 @@ function greeting(name) {
     name.forEach((n) => {
       if (isCapitalLettersOnly(n)) {
         uppercaseName = n;
-      }
-      else {
+      } else {
         lowercaseNames.push(n);
       }
     });
     lowercaseNames.forEach((n, index) => {
-      if(index < lowercaseNames.length - 2) {
+      if (index < lowercaseNames.length - 2) {
         stringToReturn += `${n}, `;
       } else if (index === lowercaseNames.length - 1) {
         stringToReturn += `and ${n}.`;
@@ -31,7 +30,7 @@ function greeting(name) {
         stringToReturn += `${n} `;
       }
     });
-    if(uppercaseName != null) {
+    if (uppercaseName != null) {
       stringToReturn += ` AND HELLO ${uppercaseName} !`;
     }
     return stringToReturn;
