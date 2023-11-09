@@ -31,3 +31,9 @@ test('should return "Hello, KENOBI!"', () => {
   const result = greeting("KENOBI");
   expect(result).toEqual("HELLO, KENOBI!");
 });
+
+// 4
+test('should return "Hello, Jill and Jane."', () => {
+  const result = greeting(["Jill", "Jane"]);
+  expect(result).toEqual("Hello, Jill and Jane.");
+});
