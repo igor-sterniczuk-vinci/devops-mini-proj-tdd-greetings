@@ -43,3 +43,8 @@ test('should return "Hello, Kratos, Thanathos and Hypnos."', () => {
   const result = greeting(["Kratos", "Thanathos", "Hypnos"]);
   expect(result).toEqual("Hello, Kratos, Thanathos and Hypnos.");
 });
+// 6
+test('should return "Hello, Kratos and Hypnos. AND HELLO BRIAN !"', () => {
+  const result = greeting(["Kratos", "THANATHOS", "Hypnos"]);
+  expect(result).toEqual("Hello, Kratos and Hypnos. AND HELLO BRIAN !");
+});
