@@ -11,6 +11,13 @@ function greeting(name) {
   if (isEmptyNullOrWhitespace(name)) {
     return "Hello, my friend.";
   }
+  if (Array.isArray(name)) {
+    let stringToReturn = 'Hello, ';
+    name.forEach((n, index) => {
+      stringToReturn += index === name.length - 1 ? `and ${n}.` : `${n} `;
+    });
+    return stringToReturn;
+  }
   if (isCapitalLettersOnly(name)) {
     return `HELLO, ${name}!`;
   }
