@@ -11,6 +11,9 @@ function greeting(name) {
   if (isEmptyNullOrWhitespace(name)) {
     return "Hello, my friend.";
   }
+  if (isCapitalLettersOnly(name)) {
+    return `HELLO, ${name}!`;
+  }
   return `Hello, ${name}.`;
 }
 
