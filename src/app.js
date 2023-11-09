@@ -6,15 +6,18 @@ function isCapitalLettersOnly(name) {
   return name === name.toUpperCase();
 }
 
-
 function greeting(name) {
   if (isEmptyNullOrWhitespace(name)) {
     return "Hello, my friend.";
   }
   if (Array.isArray(name)) {
-    let stringToReturn = 'Hello, ';
+    let stringToReturn = "Hello, ";
     name.forEach((n, index) => {
-      stringToReturn += index === name.length - 1 ? `and ${n}.` : `${n} `;
+      if (index === name.length - 1) {
+        stringToReturn += `and ${n}.`;
+      } else {
+        stringToReturn += `${n} `;
+      }
     });
     return stringToReturn;
   }
