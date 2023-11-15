@@ -2,7 +2,7 @@
 /* eslint-disable import/no-unresolved */
 const { test, expect } = require("@jest/globals");
 
-const greeting = require("./app");
+const greet = require("./app");
 
 // 1
 test('should return "Hello name."', () => {
@@ -52,4 +52,29 @@ test('should return "Hello, Kratos and Hypnos. AND HELLO THANATHOS !"', () => {
 test('should return "Hello, Thanathos and Hypnos. AND HELLO KRATOS !"', () => {
   const result = greeting(["KRATOS", "Thanathos", "Hypnos"]);
   expect(result).toEqual("Hello, Thanathos and Hypnos. AND HELLO KRATOS !");
+});
+// 7
+test('should return "Bonjour Kratos et Thanathos."', () => {
+  const result = greeting(["Kratos", "Thanathos", "fr"]);
+  expect(result).toEqual("Bonjour Kratos et Thanathos.");
+});
+test('should return "Bonjour Thanathos et Kratos."', () => {
+  const result = greeting(["fr", "Thanathos", "Kratos"]);
+  expect(result).toEqual("Bonjour Thanathos et Kratos.");
+});
+test('should return "Bonjour Thanathos et Kratos."', () => {
+  const result = greeting(["Thanathos", "fr", "Kratos"]);
+  expect(result).toEqual("Bonjour Thanathos et Kratos.");
+});
+test('should return "Halo Thanathos en Kratos."', () => {
+  const result = greeting(["Thanathos", "nl", "Kratos"]);
+  expect(result).toEqual("Halo Thanathos en Kratos.");
+});
+test('should return "Halo Thanathos en Kratos."', () => {
+  const result = greeting(["Thanathos", "Kratos", "nl"]);
+  expect(result).toEqual("Halo Thanathos en Kratos.");
+});
+test('should return "Halo Kratos en Thanathos."', () => {
+  const result = greeting(["nl", "Kratos", "Thanathos"]);
+  expect(result).toEqual("Halo Kratos en Thanathos.");
 });
