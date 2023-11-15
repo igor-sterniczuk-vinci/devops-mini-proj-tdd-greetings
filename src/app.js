@@ -26,7 +26,7 @@ function formatLowercaseNames(lowercaseNames, language) {
   return formattedString;
 }
 
-function greeting(name) {
+function greet(name) {
   if (isEmptyNullOrWhitespace(name)) {
     return "Hello, my friend.";
   }
@@ -88,4 +88,4 @@ function greetSingle(name) {
   return `Hello, ${name}.`;
 }
 
-module.exports = greeting;
+module.exports = greet;
