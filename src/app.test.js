@@ -74,3 +74,7 @@ test('should return "Halo Thanathos en Kratos."', () => {
   const result = greeting(["Thanathos", "Kratos", "nl"]);
   expect(result).toEqual("Halo Thanathos en Kratos.");
 });
+test('should return "Halo Kratos en Thanathos."', () => {
+  const result = greeting(["nl", "Kratos", "Thanathos"]);
+  expect(result).toEqual("Halo Kratos en Thanathos.");
+});
