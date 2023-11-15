@@ -2,7 +2,7 @@
 /* eslint-disable import/no-unresolved */
 const { test, expect } = require("@jest/globals");
 
-const greeting = require("./app");
+const greet = require("./app");
 
 // 1
 test('should return "Hello name."', () => {

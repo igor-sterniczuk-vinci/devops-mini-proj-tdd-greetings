@@ -9,13 +9,11 @@ function isCapitalLettersOnly(name) {
 function formatLowercaseNames(lowercaseNames, language) {
   let formattedString = "";
   let conjunction = "and";
-
   if (language === "fr") {
     conjunction = "et";
   } else if (language === "nl") {
     conjunction = "en";
   }
-
   lowercaseNames.forEach((n, index) => {
     if (index < lowercaseNames.length - 2) {
       formattedString += `${n}, `;
@@ -25,7 +23,6 @@ function formatLowercaseNames(lowercaseNames, language) {
       formattedString += `${n} `;
     }
   });
-
   return formattedString;
 }
 
