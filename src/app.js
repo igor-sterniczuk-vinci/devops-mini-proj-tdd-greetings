@@ -6,38 +6,88 @@ function isCapitalLettersOnly(name) {
   return name === name.toUpperCase();
 }
 
+function formatLowercaseNames(lowercaseNames, language) {
+  let formattedString = "";
+  let conjunction = "and";
+
+  if (language === "fr") {
+    conjunction = "et";
+  } else if (language === "nl") {
+    conjunction = "en";
+  }
+
+  lowercaseNames.forEach((n, index) => {
+    if (index < lowercaseNames.length - 2) {
+      formattedString += `${n}, `;
+    } else if (index === lowercaseNames.length - 1) {
+      formattedString += `${conjunction} ${n}.`;
+    } else {
+      formattedString += `${n} `;
+    }
+  });
+
+  return formattedString;
+}
+
 function greeting(name) {
   if (isEmptyNullOrWhitespace(name)) {
     return "Hello, my friend.";
   }
+
   if (Array.isArray(name)) {
-    let stringToReturn = "Hello, ";
-    let uppercaseName;
-    let lowercaseNames = [];
-    name.forEach((n) => {
-      if (isCapitalLettersOnly(n)) {
-        uppercaseName = n;
-      } else {
-        lowercaseNames.push(n);
-      }
-    });
-    lowercaseNames.forEach((n, index) => {
-      if (index < lowercaseNames.length - 2) {
-        stringToReturn += `${n}, `;
-      } else if (index === lowercaseNames.length - 1) {
-        stringToReturn += `and ${n}.`;
-      } else {
-        stringToReturn += `${n} `;
-      }
-    });
-    if (uppercaseName != null) {
-      stringToReturn += ` AND HELLO ${uppercaseName} !`;
-    }
-    return stringToReturn;
+    // eslint-disable-next-line no-use-before-define
+    return greetArray(name);
   }
+
+  // eslint-disable-next-line no-use-before-define
+  return greetSingle(name);
+}
+
+function greetArray(names) {
+  let stringToReturn = "Hello, ";
+  let uppercaseName;
+  let lowercaseNames = [];
+  let language = "en"; // Default language is English
+
+  const isLanguageTag = (name) => ["fr", "nl"].includes(name);
+
+  names.forEach((n) => {
+    if (isLanguageTag(n)) {
+      // Set the language if a language tag is found
+      language = n;
+    } else if (isCapitalLettersOnly(n)) {
+      uppercaseName = n;
+    } else {
+      lowercaseNames.push(n);
+    }
+  });
+
+  // Apply language-specific translation
+  switch (language) {
+    case "fr":
+      stringToReturn = "Bonjour ";
+      break;
+    case "nl":
+      stringToReturn = "Halo ";
+      break;
+    default:
+      break;
+  }
+
+  stringToReturn += formatLowercaseNames(lowercaseNames, language);
+
+  if (uppercaseName != null) {
+    stringToReturn += ` AND HELLO ${uppercaseName} !`;
+  }
+
+  return stringToReturn;
+}
+
+function greetSingle(name) {
   if (isCapitalLettersOnly(name)) {
     return `HELLO, ${name}!`;
   }
+
   return `Hello, ${name}.`;
 }
 
