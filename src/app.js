@@ -42,7 +42,7 @@ function greet(name) {
 
 function greetArray(names) {
   let stringToReturn = "Hello, ";
-  let uppercaseName;
+  let uppercaseNames = [];
   const lowercaseNames = [];
   let language = "en"; // Default language is English
 
@@ -53,7 +53,7 @@ function greetArray(names) {
       // Set the language if a language tag is found
       language = n;
     } else if (isCapitalLettersOnly(n)) {
-      uppercaseName = n;
+      uppercaseNames.push(n);
     } else {
       lowercaseNames.push(n);
     }
@@ -73,8 +73,9 @@ function greetArray(names) {
 
   stringToReturn += formatLowercaseNames(lowercaseNames, language);
 
-  if (uppercaseName != null) {
-    stringToReturn += ` AND HELLO ${uppercaseName} !`;
+  if (uppercaseNames.length > 0) {
+    const formattedUppercaseNames = uppercaseNames.map((name) => name.toUpperCase());
+    stringToReturn += ` AND HELLO ${formattedUppercaseNames.join(' AND ')} !`;
   }
 
   return stringToReturn;
