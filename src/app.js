@@ -42,7 +42,7 @@ function greet(name) {
 
 function greetArray(names) {
   let stringToReturn = "Hello, ";
-  let uppercaseNames = [];
+  const uppercaseNames = [];
   const lowercaseNames = [];
   let language = "en"; // Default language is English
 
