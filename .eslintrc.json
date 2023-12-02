@@ -11,6 +11,13 @@
   "rules": {
     "semi": ["error", "always"],
     "no-console": "warn",
-    "quotes": "off"
+    "quotes": "off",
+    "camelcase": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "no-eval": "off",
+    "no-template-curly-in-string": "off",
+    "no-multi-assign": "off",
+    "indent": "off"
   }
 }
