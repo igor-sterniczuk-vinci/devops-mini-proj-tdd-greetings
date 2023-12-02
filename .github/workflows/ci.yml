@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Start Time
+        run: echo "Pipeline started at $(date)"
+
       - name: Checkout repository
         uses: actions/checkout@v2
 
