@@ -75,7 +75,7 @@ function greetArray(names) {
 
   if (uppercaseNames.length > 0) {
     const formattedUppercaseNames = uppercaseNames.map((name) => name.toUpperCase());
-    stringToReturn += ` AND HELLO ${formattedUppercaseNames.join(' AND ')} !`;
+    stringToReturn += ` AND HELLO ${formattedUppercaseNames.join(" AND ")} !`;
   }
 
   return stringToReturn;
