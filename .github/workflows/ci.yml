@@ -38,3 +38,10 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Pipeline Success Message
+        if: ${{ success() }}
+        run: echo "PIPELINE SUCCESS WITHOUT ERRORS"
+
+      - name: End Time
+        run: echo "Pipeline ended at $(date)"
