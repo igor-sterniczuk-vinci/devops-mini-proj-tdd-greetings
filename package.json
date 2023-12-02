@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IweZix/devops-mini-proj-tdd-greetings.git"
+    "url": "git+https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings"
   },
-  "author": "Luca NICOLAS, Kilian DE SMET, Arthur STOFFELS",
+  "author": "Igor Sterniczuk, Hubert Lopaciuk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IweZix/devops-mini-proj-tdd-greetings/issues"
+    "url": "https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings/issues"
   },
-  "homepage": "https://github.com/IweZix/devops-mini-proj-tdd-greetings#readme",
+  "homepage": "https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings/blob/main/README.md",
   "dependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.0.1"
