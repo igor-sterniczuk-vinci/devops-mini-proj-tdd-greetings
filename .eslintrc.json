@@ -18,6 +18,15 @@
     "no-eval": "off",
     "no-template-curly-in-string": "off",
     "no-multi-assign": "off",
-    "indent": "off"
+    "indent": "off",
+    "no-shadow": "off",
+    "func-names": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "default-case": "off",
+    "no-return-assign": "off",
+    "no-cond-assign": "off",
+    "no-void": "off",
+    "no-sequences": "off"
   }
 }
