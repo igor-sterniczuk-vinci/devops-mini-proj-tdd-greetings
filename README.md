@@ -80,7 +80,7 @@ La directive "run" par contre est utilisée pour spécifier les commandes qui se
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline.
 
 ```bash
-<uses: Cette directive est utilisée pour spécifier une action déjà définie dans le GitHub Marketplace ou dans le référentiel. Elle permet d'inclure et d'exécuter des actions tierces sans avoir à définir les étapes détaillées. Dans votre pipeline, l'utilisation de uses peut être observée dans l'étape "Checkout repository", où l'action "actions/checkout@v2" est utilisée pour effectuer une opération de checkout du code source.
+<uses: Cette directive est utilisée pour spécifier une action déjà définie dans le GitHub Marketplace. Elle permet d'inclure et d'exécuter des actions tierces sans avoir à définir les étapes détaillées. Dans votre pipeline, l'utilisation de uses peut être observée dans l'étape "Checkout repository", où l'action "actions/checkout@v2" est utilisée pour effectuer une opération de checkout du code source.
 
 run: La directive run est utilisée pour spécifier les commandes spécifiques qui seront exécutées dans le contexte de votre workflow. Contrairement à uses, run nécessite que vous fournissiez directement les commandes à exécuter. Dans votre pipeline, chaque étape contient une ou plusieurs instructions run pour exécuter des commandes spécifiques. Par exemple, l'étape "Install dependencies" utilise run: npm install pour installer les dépendances du projet.
 
@@ -90,7 +90,7 @@ En résumé, uses est utilisé pour incorporer des actions pré-définies, tandi
 - Peut-on intervertir différentes étapes dans votre pipeline ? Que votre réponse soit oui ou non, expliquez par rapport à votre pipeline.
 
 ```bash
-<Dans notre fichier YML de pipeline, chaque étape est exécutée séquentiellement, ce qui signifie que l'étape suivante dépend souvent du succès de l'étape précédente. Par exemple, dans votre pipeline actuel, l'étape "Build" dépend du succès des étapes "Check Prettier" et "Check Lint". Si l'une de ces étapes échoue, le pipeline s'arrête.
+<Dans une pipeline, chaque étape est exécutée séquentiellement, ce qui signifie que l'étape suivante dépend souvent du succès de l'étape précédente. Par exemple, dans votre pipeline actuel, l'étape "Build" dépend du succès des étapes "Check Prettier" et "Check Lint". Si l'une de ces étapes échoue, la pipeline s'arrête.
 
 Si vous interchangez l'ordre des étapes, par exemple, en plaçant "Build" avant les étapes de vérification, le pipeline tentera toujours de construire même si les vérifications échouent potentiellement, ce qui peut conduire à des résultats imprévisibles.
 
