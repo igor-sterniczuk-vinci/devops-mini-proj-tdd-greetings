@@ -6,6 +6,7 @@ Travail de recherche , mettre en place de l'integration continue avec les GitHub
 
 - N° de groupe : 60
 - Membres du groupe : Hubert Lopaciuk, Igor Sterniczuk
+- Repo : https://github.com/igor-sterniczuk-vinci/devops-mini-proj-tdd-greetings
 
 ## Énoncé
 
