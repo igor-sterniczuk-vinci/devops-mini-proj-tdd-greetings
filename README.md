@@ -97,7 +97,7 @@ Si vous interchangez l'ordre des étapes, par exemple, en plaçant "Build" avant
 En résumé, l'ordre des étapes dans le fichier YML reflète la séquence logique dans laquelle les actions doivent être effectuées, et changer cet ordre peut compromettre l'intégrité du processus de construction et de test.>
 ```
 
-- Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ?
+- Je veux ajouter un test de sécurité sur mon pipeline en exécutant le programme secure_app. Que devrais-je faire ? Quelles questions devriez-vous vous poser ??
 
 ```bash
 <Il faut d'abord insaller le programme, ensuite ajouter le step avec le test de securite c'est a dire -name: test de securite run: secure_app , gerer aussi les dependances de secure_app.
