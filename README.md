@@ -48,16 +48,16 @@ Liens utiles:
 
 ```bash
 <Ce fichier YAML configure un workflow CI/CD avec GitHub Actions. Il s'active à chaque push ou pull request sur la branche principale. Le workflow utilise Ubuntu comme environnement d'exécution et suit les étapes suivantes :
-Enregistre l'heure de début du pipeline.
-Récupère le code source depuis le référentiel.
-    Configure Node.js.
-    Installe les dépendances avec npm.
-    Vérifie le formatage avec Prettier.
-    Effectue une analyse statique du code avec ESLint.
-    Construit le code avec webpack.
-    Exécute les tests.
-    Affiche un message de succès si toutes les étapes précédentes réussissent.
-    Enregistre l'heure de fin du pipeline.>
+-Enregistre l'heure de début du pipeline.
+-Récupère le code source depuis le référentiel.
+-Configure Node.js.
+-nstalle les dépendances avec npm.
+-Vérifie le formatage avec Prettier.
+-Effectue une analyse statique du code avec ESLint.
+-Construit le code avec webpack.
+-Exécute les tests.
+-Affiche un message de succès si toutes les étapes précédentes réussissent.
+-Enregistre l'heure de fin du pipeline.>
 ```
 
 - En particulier : à quoi sert le “on” ? dans votre fichier YML ? Quelle est la différence entre “on push” et “on pull request”. Que conseilleriez-vous comme option parmi ces 2 options à un groupe de développeurs junior ? Pourquoi ?
