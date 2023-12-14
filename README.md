@@ -64,20 +64,17 @@ Liens utiles:
 
 ```bash
 <La section "on" dans le fichier YML spécifie les déclencheurs du workflow :
-
-"on push": Déclenche le workflow à chaque push direct sur la branche principale.
-
-"on pull_request": Déclenche le workflow à chaque ouverture ou modification de pull request.
-
+-"on push": Déclenche le workflow à chaque push direct sur la branche principale.
+-"on pull_request": Déclenche le workflow à chaque ouverture ou modification de pull request.
 Conseil pour les développeurs juniors : "on pull_request" est généralement recommandé car il permet de tester les modifications avant de les fusionner dans la branche principale, assurant ainsi une meilleure qualité du code.>
 ```
 
 - Quelle est la différence entre run et run_on ? Expliquez par rapport à votre pipeline.
 
 ```bash
-<La directive "runs-on" est utilisée pour spécifier le système d'exploitation sur lequel le travail (job) doit s'exécuter. Par exemple, dans notre fichier YAML, vous avez la directive "runs-on: ubuntu-latest", ce qui signifie que le travail s'exécutera sur la dernière version d'Ubuntu.
+<La directive "runs-on" est utilisée pour spécifier le système d'exploitation sur lequel le travail doit s'exécuter. Par exemple, dans notre fichier YML, vous avez la directive "runs-on: ubuntu-latest", ce qui signifie que le travail s'exécutera sur la dernière version d'Ubuntu.
 
-La directive "run" par contre est utilisée pour spécifier les commandes qui seront exécutées à l'intérieur d'un travail (job). Dans notre fichier YAML, chaque étape du travail (indiquee par des steps) contient une instruction "run" qui définit la commande à exécuter. Par exemple, l'étape "Install dependencies" utilise la commande "npm install" pour installer les dépendances du projet.>
+La directive "run" par contre est utilisée pour spécifier les commandes qui seront exécutées à l'intérieur d'un travail. Dans notre fichier YML, chaque étape du travail (indiquee par des steps) contient une instruction "run" qui définit la commande à exécuter. Par exemple, l'étape "Install dependencies" utilise la commande "npm install" pour installer les dépendances du projet.>
 ```
 
 - Quelle est la différence entre “use” et “run”. Expliquez par rapport à votre pipeline.
