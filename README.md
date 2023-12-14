@@ -103,3 +103,4 @@ En résumé, l'ordre des étapes dans le fichier YML reflète la séquence logiq
 <Il faut d'abord insaller le programme, ensuite ajouter le step avec le test de securite c'est a dire -name: test de securite run: secure_app , gerer aussi les dependances de secure_app.
 Les questions a se poser sont les suivantes: est-ce que secure_app est compatible avec l'environement d'execution, regarder si il faut installer des dependances de secure_app, interpreter les resultat renvoye par l'app pour decider si la pipeline a reussi ou pas, l'impact de l'app sur le temps d'execution de la pipeline.>
 ```
+- Test Merge
